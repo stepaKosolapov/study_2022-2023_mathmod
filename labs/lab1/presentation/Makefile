@@ -22,6 +22,12 @@ REVEALJS_THEME = beige
 
 all: $(FILES)
 
+images: 
+	python ./utils/renameFiles.py
+
+refs:
+	python ./utils/insertImage.py
+
 clean:
 	-@rm $(FILES) *~
 

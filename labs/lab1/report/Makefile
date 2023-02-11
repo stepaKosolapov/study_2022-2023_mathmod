@@ -29,6 +29,11 @@ BIB_OPTIONS = --citeproc
 
 all: $(FILES)
 
+images: 
+	python ./utils/renameFiles.py
+
+refs:
+	python ./utils/insertImage.py
 
 clean:
 	-rm $(FILES) *~
