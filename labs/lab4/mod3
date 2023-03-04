@@ -1,0 +1,14 @@
+model Lab_3
+  parameter Real w=4;
+  parameter Real g=4;
+
+  Real x(start=1.5);
+  Real y(start=1.1);
+
+equation
+  der(x) = y;
+  der(y) = -g*y-w*x + sin(4*time);
+
+  annotation(experiment(StartTime = 0, StopTime = 44, Tolerance = 1e-6, Interval = 0.05));
+
+end Lab_3
